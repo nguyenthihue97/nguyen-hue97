@@ -1,0 +1,1337 @@
+{
+    "source":  "https://pal2.co.jp/attraction",
+    "scrapedAt":  "2026-09-23T09:18:53Z",
+    "map":  {
+                "image":  "assets/map.webp",
+                "width":  2400,
+                "height":  1715,
+                "source":  "https://pal2.co.jp/map"
+            },
+    "zones":  [
+                  {
+                      "key":  "entrance",
+                      "name":  "エントランスゾーン",
+                      "short":  "エントランス"
+                  },
+                  {
+                      "key":  "lakeside",
+                      "name":  "レイクサイドゾーン",
+                      "short":  "レイクサイド"
+                  },
+                  {
+                      "key":  "monte",
+                      "name":  "モンテゾーン",
+                      "short":  "モンテ"
+                  }
+              ],
+    "attractions":  [
+                        {
+                            "id":  "bakke",
+                            "number":  1,
+                            "name":  "バッケとかくれんぼ",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  600,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "バッケが仕掛けた様々なトラップをクリアし、最後の部屋を目指すウォークスルー型アトラクション♪",
+                            "description":  "いたずら好きなかわいいおばけの「バッケ」が仕掛けた様々なトラップをクリアしながら\n最後の部屋を目指すウォークスルー型アトラクション。\nかくれている「バッケ」を見つけることができるかな？",
+                            "disclaimer":  "未就学児は中学生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/bakke.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/8fcde999403946998ff824dc05c89203/evn-pal2-attraction-01.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/8fcde999403946998ff824dc05c89203/evn-pal2-attraction-01.png"
+                                        ],
+                            "pin":  {
+                                        "x":  41.92,
+                                        "y":  66.77
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/bakke",
+                            "updatedAt":  "2026-08-07T02:40:25.365Z"
+                        },
+                        {
+                            "id":  "gururimori",
+                            "number":  2,
+                            "name":  "カード迷路「ぐるり森大冒険」",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  500,
+                            "priceNotes":  "※フリーパス・年間フリーパスをお持ちの方は1日1回まで利用可（フリーパスをお持ちの方は2回目以降は1回100円）\n現金不可。のりもの券をお買い求めください",
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  0,
+                                             "max":  null,
+                                             "label":  "0歳～（3歳から有料）"
+                                         },
+                            "catchcopy":  "迷路の中にあるぐるりパワーをためて、カードバトルに挑戦しよう！",
+                            "description":  "\"ハムスタンツール\"を使って\n迷路の中にあるぐるりパワーをためて、カードバトルに挑戦しよう！\n見事勝利すると、オリジナルグッズをプレゼント！\n3種類の\"浜名湖パルパル限定カード\"も登場！？",
+                            "disclaimer":  "未就学児は高校生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/gururimori.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/917a17b2614e4a3cb88252a5da04c9f4/evn-pal2-attraction-02.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/917a17b2614e4a3cb88252a5da04c9f4/evn-pal2-attraction-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/481cefcc651b4434967e6a519ee6fb79/evn-pal2-attraction-02-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/03de307e715347f9bc94ec1778290989/evn-pal2-attraction-02-03.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/2a9c9f9a427a4bf192eba46edb3560fc/evn-pal2-attraction-02-04.png"
+                                        ],
+                            "pin":  {
+                                        "x":  35.58,
+                                        "y":  72.72
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/gururimori",
+                            "updatedAt":  "2026-08-07T02:40:44.373Z"
+                        },
+                        {
+                            "id":  "coaster",
+                            "number":  3,
+                            "name":  "メガコースター「四次元」",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  900,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  120,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  7,
+                                             "max":  64,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "あたまも！おなかも！キリモミ回転★6つの強烈な仕掛けがキミをまってるぞ！",
+                            "description":  "あたまも！おなかも！キリモミ回転★\n6つの強烈な仕掛けがキミをまってるぞ！\n時速82km/hまで一気に加速する「ファーストドロップ」に\n180度反転状態から真下に向かって急降下する「ツイストダイブ」\n心臓を中心に360度回転しながら走行する「ハートラインロール」\nなどなど、バリエーション豊かなコースターです！",
+                            "disclaimer":  "7歳以上64歳以下で身長120cm以上　※帽子・マフラー・スカーフなど、落下・巻きつきの恐れがあるものは外してください",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/coaster.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/40cc7f97650c49b4a812ab2017ae2525/evn-pal2-attraction-03-02.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/06b24da7cf334c91ae9f3f6311e17f17/evn-pal2-attraction-03.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/40cc7f97650c49b4a812ab2017ae2525/evn-pal2-attraction-03-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/1df9f1c973dc4439a38f6120e8d515d9/evn-pal2-attraction-03-03.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/53388811a859492ba86767587316ff1d/evn-pal2-attraction-03-04.png"
+                                        ],
+                            "pin":  {
+                                        "x":  30.5,
+                                        "y":  71.09
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/coaster",
+                            "updatedAt":  "2026-09-14T04:46:54.135Z"
+                        },
+                        {
+                            "id":  "kurukuru",
+                            "number":  4,
+                            "name":  "ボンジョールノのくるくるクルーズ",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  400,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  95,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "ボンジョールノとくるくる陽気なクルージングに出発だ！！",
+                            "description":  "ボンジョールノとくるくる陽気なクルージングに出発だ！！\n徐々にゆれが大きくなり、ついにはライドが回転したり♪\nファミリーやカップルなど幅広い層が楽しめる、爽快感のあるアトラクション！",
+                            "disclaimer":  "3歳以上で身長95cm以上。110cm未満は高校生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/kurukuru.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/602a6dbb4a48442e98067fc941354b09/evn-pal2-attraction-04.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/602a6dbb4a48442e98067fc941354b09/evn-pal2-attraction-04.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/0759e400f1e145e3a6389803677ba720/evn-pal2-attraction-04-02.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/37e4915928da4db5b8a1e0253bcd9b42/evn-pal2-attraction-04-03.jpg"
+                                        ],
+                            "pin":  {
+                                        "x":  23.33,
+                                        "y":  80.66
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/kurukuru",
+                            "updatedAt":  "2026-09-14T04:46:54.097Z"
+                        },
+                        {
+                            "id":  "mini",
+                            "number":  5,
+                            "name":  "ミニコースター",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  600,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  100,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  4,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "チビッコに大人気の小さなコースター。",
+                            "description":  "チビッコに大人気の小さなコースター。\n上ったり下がったりカーブしたり・・・。幅広い年齢層にうけてます！",
+                            "disclaimer":  "4歳以上で身長100cm以上。4歳は中学生以上(有料)の同伴が必要　\n※帽子・マフラー・スカーフなど、落下・巻きつきの恐れがあるものは外してください",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/mini.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/3ea3dbbb5b3f4feba5ab4ff117cf2dae/evn-pal2-attraction-05-02.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/8bddd3e4043a4f1ea9de3af4c8a2d50d/evn-pal2-attraction-05.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/3ea3dbbb5b3f4feba5ab4ff117cf2dae/evn-pal2-attraction-05-02.png"
+                                        ],
+                            "pin":  {
+                                        "x":  21.75,
+                                        "y":  91.4
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/mini",
+                            "updatedAt":  "2026-09-14T04:46:54.122Z"
+                        },
+                        {
+                            "id":  "baloon",
+                            "number":  6,
+                            "name":  "バルーンレース",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  500,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "4人乗りの気球に乗って気分爽快！！",
+                            "description":  "4人乗りの気球に乗って気分爽快！！空のレースを楽しめます。\n絶叫マシンで楽しんだ後はこのバルーンレースで癒されてみてはいかが？",
+                            "disclaimer":  "未就学児は中学生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/baloon.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/0f79ca39e9724647b10b17dc192e30b3/evn-pal2-attraction-06-02.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/0f79ca39e9724647b10b17dc192e30b3/evn-pal2-attraction-06-02.png"
+                                        ],
+                            "pin":  {
+                                        "x":  33.08,
+                                        "y":  81.24
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/baloon",
+                            "updatedAt":  "2026-09-14T04:46:54.134Z"
+                        },
+                        {
+                            "id":  "gokart",
+                            "number":  7,
+                            "name":  "ゴーカート",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  500,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "本格的なエンジンの音を聞きながら約2分のコースを走ろう！",
+                            "description":  "本格的なエンジンの音を聞きながら約2分のコースを走ろう！\n左右どちらにもハンドルがついているので、小さなお子様もかっこいいドライブを満喫できるよ。\n≫待ち時間を短く！［のりもの優先券］についてはこちら",
+                            "disclaimer":  "小学校3年生までは中学生以上(有料)の同伴が必要。運転は小学校4年生以上",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/gokart.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/f881ced5db8149038541a74596ae98e1/evn-pal2-attraction-07.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/f881ced5db8149038541a74596ae98e1/evn-pal2-attraction-07.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/94db219e472941bf82f8c13f66c019f8/evn-pal2-attraction-07-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/f85ab295c9234ec2b5a176f9119d4e57/evn-pal2-attraction-07-03.png"
+                                        ],
+                            "pin":  {
+                                        "x":  22.5,
+                                        "y":  76.34
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/gokart",
+                            "updatedAt":  "2026-09-14T04:46:54.141Z"
+                        },
+                        {
+                            "id":  "miniq",
+                            "number":  8,
+                            "name":  "ミニＱレーシング",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  400,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "カラフルなミニQに乗ってキミも小さなレーサーになろう！",
+                            "description":  "見た目はかわいいけど...乗ったら意外にあばれん坊！！\nぶつかるかぶつからないか、絶妙なスリルを楽しみながら\nカラフルなミニQに乗ってキミも小さなレーサーになろう！",
+                            "disclaimer":  "6歳未満は中学生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/miniq.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/7a945a152c8a4ab7b4aeb82ca5f52c7e/evn-pal2-attraction-08.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/7a945a152c8a4ab7b4aeb82ca5f52c7e/evn-pal2-attraction-08.png"
+                                        ],
+                            "pin":  {
+                                        "x":  23.5,
+                                        "y":  83.7
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/miniq",
+                            "updatedAt":  "2026-09-14T04:46:55.097Z"
+                        },
+                        {
+                            "id":  "blockcart",
+                            "number":  9,
+                            "name":  "ミズボー＆タマボーの レッツ！ブロックカート",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  true,
+                            "price":  500,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  2,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "ブロックを組み立てて\u003cbr\u003e自分だけのオリジナルカートで走ろう！",
+                            "description":  "ブロックを組み立てて\n自分だけのオリジナルカートを作ろう！\n完成したら\n\"世界にひとつだけ\"のオリジナルカートで走ろう♪",
+                            "disclaimer":  "2歳～未就学児は高校生以上(有料)の同伴が必要。",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/blockcart.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/8eb865cf94a240baad5f2f8f723341b0/evn-pal2-attraction-09.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/8eb865cf94a240baad5f2f8f723341b0/evn-pal2-attraction-09.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/7503ad05c7c3464082863676ad630690/evn-pal2-attraction-09-02.png"
+                                        ],
+                            "pin":  {
+                                        "x":  27.17,
+                                        "y":  84.28
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/blockcart",
+                            "updatedAt":  "2026-08-31T07:46:26.422Z"
+                        },
+                        {
+                            "id":  "dragon",
+                            "number":  10,
+                            "name":  "ドラゴンファイター",
+                            "zone":  "レイクサイドゾーン",
+                            "zoneKey":  "lakeside",
+                            "isAttraction":  true,
+                            "price":  600,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "ライドに乗り、4匹のドラゴンを倒す冒険へ出発だ！",
+                            "description":  "ライドに乗り、レーザー銃で敵を攻撃！\n伝説の武器を手に取り4匹のドラゴンを倒す冒険へ出発だ！\n最高ランク『Sランク』の「ドラゴンマスター」を目指そう☆",
+                            "disclaimer":  "未就学児は中学生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/dragon.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e5e20f11007a4efda707f7d26129fc1a/evn-pal2-attraction-10.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e5e20f11007a4efda707f7d26129fc1a/evn-pal2-attraction-10.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/dae2d984903248159c8a8373703acf23/evn-pal2-attraction-10-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/576a65f8025f49a288d733b57f8e17d3/evn-pal2-attraction-10-03.png"
+                                        ],
+                            "pin":  {
+                                        "x":  39.5,
+                                        "y":  58.24
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/dragon",
+                            "updatedAt":  "2026-08-31T07:47:48.329Z"
+                        },
+                        {
+                            "id":  "popcornpanic",
+                            "number":  11,
+                            "name":  "シューティングシアター 「ポップコーンパニック」",
+                            "zone":  "レイクサイドゾーン",
+                            "zoneKey":  "lakeside",
+                            "isAttraction":  true,
+                            "price":  600,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "日本初！シアター型シューティングアトラクション！",
+                            "description":  "いつも映画の途中で食べられてしまうポップコーンたちが映画をハイジャック！？\n映画館ではじけまくっているポップコーンたちをシューティング！\n映画を取り戻そう！",
+                            "disclaimer":  "未就学児は中学生以上(有料)の同伴が必要",
+                            "closedReason":  "点検",
+                            "image":  "assets/attractions/popcornpanic.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/ff04dc0cd0a049ef99bb896500b0981e/evn-pal2-attraction-11.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/ff04dc0cd0a049ef99bb896500b0981e/evn-pal2-attraction-11.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/ecd21ee5a131492ab29e99345c1d274a/evn-pal2-attraction-11-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/69a00d6bcd7d4180985a3e257dbf2ddc/evn-pal2-attraction-11-03.png"
+                                        ],
+                            "pin":  {
+                                        "x":  47.42,
+                                        "y":  62.1
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/popcornpanic",
+                            "updatedAt":  "2026-09-20T01:48:56.236Z"
+                        },
+                        {
+                            "id":  "wild",
+                            "number":  12,
+                            "name":  "ワイルドストーム",
+                            "zone":  "レイクサイドゾーン",
+                            "zoneKey":  "lakeside",
+                            "isAttraction":  true,
+                            "price":  600,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  120,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  64,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "大空に放り出される感覚は超絶叫！",
+                            "description":  "左右に揺さぶられ、大空に放り出される感覚は超絶叫！\n※身長制限にはくれぐれもご注意下さい",
+                            "disclaimer":  "64歳以下で身長120cm以上　※帽子・マフラー・スカーフなど、落下・巻きつきの恐れがあるものは外してください",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/wild.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/6af4654532594d92a5ac06dbb491fa83/wildstoam.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/a8df68aedb0649608d1895aa8c84f754/wildstoam.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/34d02a34819d4724a7a30ca17839094c/evn-pal2-attraction-12-02.png"
+                                        ],
+                            "pin":  {
+                                        "x":  59,
+                                        "y":  55.56
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/wild",
+                            "updatedAt":  "2026-09-14T04:46:55.091Z"
+                        },
+                        {
+                            "id":  "tower",
+                            "number":  13,
+                            "name":  "空中ブランコ「まわっタワ～」",
+                            "zone":  "レイクサイドゾーン",
+                            "zoneKey":  "lakeside",
+                            "isAttraction":  true,
+                            "price":  500,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  4,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "浜名湖を見渡す空の旅をお楽しみください♪",
+                            "description":  "みんなで楽しめるダイナミックな動きの空中ブランコ。\n目の前には浜名湖の景色が広がっています！",
+                            "disclaimer":  "未就学児は高校生以上(有料)の同伴が必要　※帽子・マフラー・スカーフなど、落下・巻きつきの恐れがあるものは外してください",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/tower.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/a006cba165b7447bbfff9469ddefdd44/evn-pal2-attraction-13.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/a006cba165b7447bbfff9469ddefdd44/evn-pal2-attraction-13.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/18bf86814e6f49ad8701b93a7c4e146f/evn-pal2-attraction-13-02.png"
+                                        ],
+                            "pin":  {
+                                        "x":  61.83,
+                                        "y":  61.63
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/tower",
+                            "updatedAt":  "2026-09-14T04:46:55.104Z"
+                        },
+                        {
+                            "id":  "detemiya",
+                            "number":  14,
+                            "name":  "立体迷路「デテミーヤ」",
+                            "zone":  "レイクサイドゾーン",
+                            "zoneKey":  "lakeside",
+                            "isAttraction":  true,
+                            "price":  500,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "様々なカラクリや障害を乗り越え、地上から最上階を目指せ！",
+                            "description":  "5階建て、高さ約12メートルの立体迷路で\nアスレチック要素も含んだ体験型アトラクション♪\n様々なカラクリや障害を乗り越え\n迷路内に隠されたスタンプを探し出して地上から最上階を目指します。\n※日没に伴い、営業を終了いたします。",
+                            "disclaimer":  "未就学児は高校生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/detemiya.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/33e837aeee54489c8eac726a5626e4f7/evn-pal2-attraction-14.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/33e837aeee54489c8eac726a5626e4f7/evn-pal2-attraction-14.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/9afa79ad99fc45e3857cccaba7a90719/evn-pal2-attraction-14-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/13a090e2d99c4fb8bb2de5fd163e6693/evn-pal2-attraction-14-03.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/8c3b9654c1924c32b5783b681aed2594/evn-pal2-attraction-14-04.png"
+                                        ],
+                            "pin":  {
+                                        "x":  70,
+                                        "y":  49.84
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/detemiya",
+                            "updatedAt":  "2026-09-14T04:46:55.083Z"
+                        },
+                        {
+                            "id":  "donburako",
+                            "number":  15,
+                            "name":  "急流すべり「ドン・ブラーコ」",
+                            "zone":  "レイクサイドゾーン",
+                            "zoneKey":  "lakeside",
+                            "isAttraction":  true,
+                            "price":  900,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  95,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "最高部14mの高さから一気に大滑走。家族でザブ～ン！",
+                            "description":  "地中海のイメージで統一された景観の中を、速い水流に乗って、8人乗り大型ライドで1周約4分。\n浜名湖を眺めながらの遊覧がお楽しみいただけます。\nクライマックスには最高部14mの高さから一気に大滑走のスリル。\n家族でザブ～ン！",
+                            "disclaimer":  "3歳以上で身長95cm以上。110cm未満は高校生以上(有料)の同伴が必要　※帽子・マフラー・スカーフなど、落下・巻きつきの恐れがあるものは外してください",
+                            "closedReason":  "点検",
+                            "image":  "assets/attractions/donburako.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/f0fc953b330a440191e9aa2cf8d6329c/evn-pal2-attraction-15.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/f0fc953b330a440191e9aa2cf8d6329c/evn-pal2-attraction-15.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/fa8f3c68545b404dac2acfb3a012bdb2/evn-pal2-attraction-15-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e4664493751948ccbda526e25e4afbec/evn-pal2-attraction-15-03.png"
+                                        ],
+                            "pin":  {
+                                        "x":  60.25,
+                                        "y":  50.54
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/donburako",
+                            "updatedAt":  "2026-09-22T00:25:27.092Z"
+                        },
+                        {
+                            "id":  "goodjob",
+                            "number":  16,
+                            "name":  "ゲームラリー「グッジョブ大作戦」",
+                            "zone":  "レイクサイドゾーン",
+                            "zoneKey":  "lakeside",
+                            "isAttraction":  true,
+                            "price":  500,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  0,
+                                             "max":  null,
+                                             "label":  "0歳～（3歳から有料）"
+                                         },
+                            "catchcopy":  "\"アニマルタウン\"でゲームに挑戦！",
+                            "description":  "カラフルな街\"アニマルタウン\"を巡って\n体を使ったいろんなゲームを楽しもう！\n個性豊かなアニマルたちとのフォトスポットも満載★",
+                            "disclaimer":  "未就学児は高校生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/goodjob.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/36c0ddd318d54fee9e9d5a016e85e7e1/evn-pal2-attraction-16-02.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/36c0ddd318d54fee9e9d5a016e85e7e1/evn-pal2-attraction-16-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/1993793b35ea45249f41a4e7e186a1b7/evn-pal2-attraction-16-03.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/90474f78e72244cdb3171c7ae58129a4/evn-pal2-attraction-16-04.png"
+                                        ],
+                            "pin":  {
+                                        "x":  69.58,
+                                        "y":  53
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/goodjob",
+                            "updatedAt":  "2026-08-31T07:48:42.718Z"
+                        },
+                        {
+                            "id":  "kaizoku",
+                            "number":  17,
+                            "name":  "キャプテンパレオの海賊船",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  400,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  100,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "全高8.5ｍのバイキング！",
+                            "description":  "全高8.5ｍのバイキング！\nパルパル園内でも高い場所（モンテゾーン）に設置してあるので\n見た目以上のスリルが楽しめるはずです♪",
+                            "disclaimer":  "身長100cm以上　未就学児は中学生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/kaizoku.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e6aea80da1424bedb19efc3af94511ee/evn-pal2-attraction-17.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e6aea80da1424bedb19efc3af94511ee/evn-pal2-attraction-17.jpg"
+                                        ],
+                            "pin":  {
+                                        "x":  44.42,
+                                        "y":  50.42
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/kaizoku",
+                            "updatedAt":  "2026-09-14T04:46:56.834Z"
+                        },
+                        {
+                            "id":  "train",
+                            "number":  18,
+                            "name":  "トマトーナのもりもりトマトーレ",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  400,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "ピカッと光るトマトのボタンを素早く押して得点を競う、白熱の対戦型”トマト狩り”アトラクション！",
+                            "description":  "ピカッと光るトマトのボタンをより多く押したチームが勝ちとなる、\n白熱の対戦型\"トマト狩り\"アトラクション！",
+                            "disclaimer":  "未就学児は中学生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/train.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/6dde3f29b308400e9a2ab59235558760/evn-pal2-attraction-18.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/6dde3f29b308400e9a2ab59235558760/evn-pal2-attraction-18.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/b25c618ec274490291584450ea069fc4/evn-pal2-attraction-18-02.jpg"
+                                        ],
+                            "pin":  {
+                                        "x":  39.08,
+                                        "y":  48.9
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/train",
+                            "updatedAt":  "2026-08-07T02:43:59.180Z"
+                        },
+                        {
+                            "id":  "merrygoround",
+                            "number":  19,
+                            "name":  "メリーゴーランド",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  500,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要",
+                                         "わんちゃんといっしょに"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "パルパルのメリーゴーランドは2階建て！！",
+                            "description":  "パルパルのメリーゴーランドは2階建て！\n1階には自分で動かせるお馬さんや馬車やティーカップがあるよ☆\n2階にいくとブランコに乗れちゃう♪",
+                            "disclaimer":  "3歳未満は中学生以上(有料)の同伴が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/merrygoround.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/fc5ad4ad118b4072b790a25b7b2199ba/evn-pal2-attraction-19.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/fc5ad4ad118b4072b790a25b7b2199ba/evn-pal2-attraction-19.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/c9ee22c477a84e8bbe9bf645bf223755/evn-pal2-attraction-19-02.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/f9c08c8bfe614bca977fb53c23862713/evn-pal2-attraction-19-03.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/289ad68e8a694e328a407ed7634c7819/evn-pal2-attraction-19-04.png"
+                                        ],
+                            "pin":  {
+                                        "x":  34.33,
+                                        "y":  46.57
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/merrygoround",
+                            "updatedAt":  "2026-08-31T07:48:54.822Z"
+                        },
+                        {
+                            "id":  "theater",
+                            "number":  20,
+                            "name":  "マスケラーナの4Ｄシアター",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  600,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "振動や風などの特殊効果を使った臨場感あふれる「超立体シアター」",
+                            "description":  "360度全周囲に張り巡らされたスクリーンに映し出された3D映像に引き込まれる。\n振動や風などの特殊効果を使った臨場感あふれる「超立体シアター」。\n≫上映スケジュールはココからチェック！",
+                            "disclaimer":  "未就学児は中学生以上(有料)の同伴が必要　※車いすの方はご相談ください",
+                            "closedReason":  "点検",
+                            "image":  "assets/attractions/theater.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/d12d7fda9b1b411bbaf2796ae463ad81/evn-pal2-attraction-20.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/d12d7fda9b1b411bbaf2796ae463ad81/evn-pal2-attraction-20.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/5726af6439e645518222c2c76dabd894/evn-pal2-attraction-20-02.png"
+                                        ],
+                            "pin":  {
+                                        "x":  25,
+                                        "y":  45.4
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/theater",
+                            "updatedAt":  "2026-09-07T02:33:43.476Z"
+                        },
+                        {
+                            "id":  "stadium",
+                            "number":  21,
+                            "name":  "パルパルスタジアム",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  600,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "パルパルのスポーツの祭典「パルワングランプリ」開催！",
+                            "description":  "パルパルのスポーツの祭典「パルワングランプリ」開催！\nボタンをたくさん押してスクリーンに映し出されたキャラクターを動かそう！\n4つの種目「かけっこ」「障害物競走」「水中遊泳」「宇宙マラソン」で\n順位を競い合う白熱のゲームアトラクション！！\n1番を目指して頑張ろう！！\n各競技の歴代最高得点は「パルパルレコード」として表示されるよ！",
+                            "disclaimer":  "6歳未満は中学生以上(有料)の同伴が必要　※車いすでの乗車可能",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/stadium.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e67d0326958b43c98308af5fa3c678b9/evn-pal2-attraction-21.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e67d0326958b43c98308af5fa3c678b9/evn-pal2-attraction-21.jpg"
+                                        ],
+                            "pin":  {
+                                        "x":  26.67,
+                                        "y":  39.68
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/stadium",
+                            "updatedAt":  "2026-08-31T07:49:29.702Z"
+                        },
+                        {
+                            "id":  "parachute",
+                            "number":  22,
+                            "name":  "パラシュートタワー",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  400,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "浜名湖の景色が一望できる“ジャックと豆の木”をイメージして作られたタワー",
+                            "description":  "\"ジャックと豆の木\"をイメージして作られたタワーは、高さ11m。\nてっぺんまで垂直にあがり、自分の背中にパラシュートが付たかのように\n上下しながらフワフワと舞い降りていきます。\n浜名湖の景色が一望できるパルパルオリジナルアトラクションです。",
+                            "disclaimer":  "6歳未満は高校生以上(有料)の同伴が必要",
+                            "closedReason":  "長期整備",
+                            "image":  "assets/attractions/parachute.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/0a4e7cee10c24bc0ba1915bd8b33d809/evn-pal2-attraction-22.png",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/0a4e7cee10c24bc0ba1915bd8b33d809/evn-pal2-attraction-22.png",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/9f83259364ee41c5af55fe3051cac55f/evn-pal2-attraction-22-02.png"
+                                        ],
+                            "pin":  {
+                                        "x":  41.67,
+                                        "y":  40.26
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/parachute",
+                            "updatedAt":  "2026-08-07T02:44:29.099Z"
+                        },
+                        {
+                            "id":  "fireman",
+                            "number":  23,
+                            "name":  "パルッキオの消防士アカデミー",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  400,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "ウォーターシューティングライドに乗って4つのステージにチャレンジ！ キミも一人前の消防士を目指そう！",
+                            "description":  "ウォーターシューティングライドに乗って4つのステージにチャレンジ。\nキミも一人前の消防士を目指そう！",
+                            "disclaimer":  "3歳未満は中学生以上(有料)の同伴が必要",
+                            "closedReason":  "点検",
+                            "image":  "assets/attractions/fireman.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/203bd3321f0e423e8bb021dfb9a59d38/palkkio.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/664289ffbb4449d98f9334f1e2ba7ff7/palkkio.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/20d00d216f524dc49c064212fef6fefb/_DSC0450.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/fe2b49d23d954caf82108224a1d38666/_DSC0430.jpg"
+                                        ],
+                            "pin":  {
+                                        "x":  47.75,
+                                        "y":  39.56
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/fireman",
+                            "updatedAt":  "2026-09-18T01:26:57.963Z"
+                        },
+                        {
+                            "id":  "teacup",
+                            "number":  24,
+                            "name":  "ティーカップ「どんぐりーの」",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  400,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要",
+                                         "わんちゃんといっしょに"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  3,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "双子の妖精「キノコーノ＆キノコーナ」がみんなを待っているよ",
+                            "description":  "ティーカップは「どんぐりをイメージ」した4人乗り。\nパルパルキャラクターの双子の妖精「キノコーノ＆キノコーナ」がみんなを待っているよ！",
+                            "disclaimer":  "5歳未満は中学生以上(有料)の同伴が必要",
+                            "closedReason":  "点検",
+                            "image":  "assets/attractions/teacup.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/13ac3d27270b449793ac6f08177ac2de/dongriino.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/a90d12748d6a41c29a94828cb5b24a09/dongriino.jpg"
+                                        ],
+                            "pin":  {
+                                        "x":  51.33,
+                                        "y":  35.36
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/teacup",
+                            "updatedAt":  "2026-09-21T03:26:54.881Z"
+                        },
+                        {
+                            "id":  "koku",
+                            "number":  25,
+                            "name":  "大観覧車「コクー」",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  800,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "雨でもOK",
+                                         "同伴必要",
+                                         "わんちゃんといっしょに"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "浜名湖一望！1周約11分の快適な空中遊覧を♪",
+                            "description":  "全高約60m（海抜約85m）で浜名湖の雄大な景色を一望♪\nゴンドラは6人乗りで、クーラー＆シートヒーターを完備しています。\n1周約11分の快適な空中遊覧を楽しもう！",
+                            "disclaimer":  "未就学児は高校生以上(有料)の同伴が必要\n※車いすでの乗車可能／ベビーカー持ち込み不可\n※わんちゃんご利用にはマナーパンツの着用が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/koku.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/f9d0a0b3f8ef4871bb0ba1d3cff27dd0/evn-pal2-attraction-25.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/f9d0a0b3f8ef4871bb0ba1d3cff27dd0/evn-pal2-attraction-25.jpg"
+                                        ],
+                            "pin":  {
+                                        "x":  47.5,
+                                        "y":  32.09
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/koku",
+                            "updatedAt":  "2026-08-31T07:50:01.002Z"
+                        },
+                        {
+                            "id":  "ducks",
+                            "number":  26,
+                            "name":  "カボチャーニとおでかけダックス",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  true,
+                            "price":  400,
+                            "priceNotes":  null,
+                            "tags":  [
+                                         "フリーパス",
+                                         "同伴必要",
+                                         "わんちゃんといっしょに"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "かわいいダックスフンドの背中に乗ってくるくる♪",
+                            "description":  "かわいいダックスフンドの背中に乗ってくるくるおさんぽ♪\n3歳から一人で乗れて小さなお子様も楽しめるアトラクション。パルパルキャラクターの「カボチャーニ」の畑の中をダックスフンドと一緒におさんぽしよう！",
+                            "disclaimer":  "3才未満は中学生以上(有料)の同伴が必要\n※わんちゃんご利用にはリードの着用が必要",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/ducks.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/316f1a4c4f8e449a8cf534cdaba0a5bb/_DSC0514.jpg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/dd2481baff4e47f0bdf479e67fa2b30b/_DSC0514.jpg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/ecad58b2b3f640d68f9b93dbc29f9448/_DSC0504.jpg"
+                                        ],
+                            "pin":  {
+                                        "x":  45.83,
+                                        "y":  37
+                                    },
+                            "sourceUrl":  "https://pal2.co.jp/attraction/ducks",
+                            "updatedAt":  "2026-09-14T04:46:56.820Z"
+                        },
+                        {
+                            "id":  "y9i23hsq5bd",
+                            "number":  null,
+                            "name":  "ガチャガチャコーナー",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  false,
+                            "price":  null,
+                            "priceNotes":  "現金のみ\nガチャガチャの種類により料金が異なります。",
+                            "tags":  [
+                                         "雨でもOK"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  null,
+                            "description":  "約80台のガチャガチャにわくわく。\n浜名湖パルパルのオリジナルガチャもあるよ♪",
+                            "disclaimer":  null,
+                            "closedReason":  null,
+                            "image":  "assets/attractions/y9i23hsq5bd.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/2cdcea5f54204eaab448edd72769a830/%E3%82%AC%E3%83%81%E3%83%A3%E3%82%AC%E3%83%81%E3%83%A3%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%BC1.jpeg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/171a3c4f911e40a0b49b8151bbfad6b2/%E3%82%AC%E3%83%81%E3%83%A3%E3%82%AC%E3%83%81%E3%83%A3%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%BC2.jpeg"
+                                        ],
+                            "pin":  null,
+                            "sourceUrl":  "https://pal2.co.jp/attraction/y9i23hsq5bd",
+                            "updatedAt":  "2026-08-30T09:58:35.751Z"
+                        },
+                        {
+                            "id":  "41qmu3d9a9",
+                            "number":  null,
+                            "name":  "ちびっこゲームコーナー",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  false,
+                            "price":  200,
+                            "priceNotes":  "現金のみ\n点検整備により予告なく休止となる場合があります。",
+                            "tags":  [
+                                         "雨でもOK"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  null,
+                            "description":  "電車やくるま、バイクなど人気の乗物がいっぱい。\n運転手体験を楽しもう",
+                            "disclaimer":  null,
+                            "closedReason":  null,
+                            "image":  "assets/attractions/41qmu3d9a9.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e5ea37cc14f2439db0f6d8e45904c14c/%E3%81%A1%E3%81%B3%E3%81%A3%E3%81%93%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9.jpeg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/e5ea37cc14f2439db0f6d8e45904c14c/%E3%81%A1%E3%81%B3%E3%81%A3%E3%81%93%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9.jpeg"
+                                        ],
+                            "pin":  null,
+                            "sourceUrl":  "https://pal2.co.jp/attraction/41qmu3d9a9",
+                            "updatedAt":  "2026-08-30T09:59:57.067Z"
+                        },
+                        {
+                            "id":  "7i209k8eu28p",
+                            "number":  null,
+                            "name":  "つきやまひろば",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  false,
+                            "price":  0,
+                            "priceNotes":  "どなたでも無料でご利用いただけます",
+                            "tags":  [
+
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  null,
+                            "description":  "芝生のお山に登って降りて、土管に隠れて通り抜けて！\nちびっこのための公園「つきやまひろば」です",
+                            "disclaimer":  null,
+                            "closedReason":  null,
+                            "image":  "assets/attractions/7i209k8eu28p.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/8abffef09e2b4903877e786d5fff6480/%E3%81%A4%E3%81%8D%E3%82%84%E3%81%BE%E3%81%B2%E3%82%8D%E3%81%B01.jpeg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/0a1af23cc674409785884e6b6774e559/%E3%81%A4%E3%81%8D%E3%82%84%E3%81%BE%E3%81%B2%E3%82%8D%E3%81%B02.jpeg"
+                                        ],
+                            "pin":  null,
+                            "sourceUrl":  "https://pal2.co.jp/attraction/7i209k8eu28p",
+                            "updatedAt":  "2026-08-30T09:58:24.586Z"
+                        },
+                        {
+                            "id":  "t6w4qkw4cdy6",
+                            "number":  null,
+                            "name":  "のれる！ PUI PUI モルカー",
+                            "zone":  "モンテゾーン",
+                            "zoneKey":  "monte",
+                            "isAttraction":  false,
+                            "price":  200,
+                            "priceNotes":  "※現金のみ\n※のりもの券、フリーパスはご利用いただけません",
+                            "tags":  [
+
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  "実際に乗って遊べるPUI PUI モルカー「シロモ」＆「ポテト」",
+                            "description":  "常にとぼけた顔で走り回る癒し系の車PUI PUI モルカー。\n実際にシロモとポテトに乗って運転を楽しもう！",
+                            "disclaimer":  "※点検整備･天候等により予告なく運休とさせていただく場合があります",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/t6w4qkw4cdy6.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/59d28d23ef20482aade7d56ad4c0e606/%E3%83%A2%E3%83%AB%E3%82%AB%E3%83%BC2.jpeg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/1bbc8f2fdf5040db8863597173454ce4/%E3%83%A2%E3%83%AB%E3%82%AB%E3%83%BC1.jpeg"
+                                        ],
+                            "pin":  null,
+                            "sourceUrl":  "https://pal2.co.jp/attraction/t6w4qkw4cdy6",
+                            "updatedAt":  "2026-08-30T09:58:45.059Z"
+                        },
+                        {
+                            "id":  "73tqcd-26i",
+                            "number":  null,
+                            "name":  "プラサカプコン　パルパル店",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  false,
+                            "price":  0,
+                            "priceNotes":  "現金のみ\nゲームにより利用料金は異なります。",
+                            "tags":  [
+                                         "雨でもOK"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  null,
+                            "description":  "クレーンゲームやアーケードゲームがたくさん！カーニバルゲームもあるよ♪",
+                            "disclaimer":  null,
+                            "closedReason":  null,
+                            "image":  "assets/attractions/73tqcd-26i.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/2f88bf34598c4d00a5911c235f6fff40/%E3%82%AB%E3%83%97%E3%82%B3%E3%83%B31.jpeg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/2f88bf34598c4d00a5911c235f6fff40/%E3%82%AB%E3%83%97%E3%82%B3%E3%83%B31.jpeg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/a71714e30b004b7e889e74a98f2b2719/%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%90%E3%83%AB1.jpeg"
+                                        ],
+                            "pin":  null,
+                            "sourceUrl":  "https://pal2.co.jp/attraction/73tqcd-26i",
+                            "updatedAt":  "2026-08-30T09:55:08.998Z"
+                        },
+                        {
+                            "id":  "gweq7s_0somk",
+                            "number":  null,
+                            "name":  "メロディペット　ホワイトライオン ＆ パンダ",
+                            "zone":  "レイクサイドゾーン",
+                            "zoneKey":  "lakeside",
+                            "isAttraction":  false,
+                            "price":  200,
+                            "priceNotes":  "※現金のみ\n※のりもの券、フリーパスはご利用いただけません",
+                            "tags":  [
+
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  null,
+                            "description":  "パンダとホワイトライオンの背中に乗って、園内をおさんぽ♪",
+                            "disclaimer":  "※点検整備･天候等により予告なく運休とさせていただく場合があります",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/gweq7s_0somk.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/5f25a30d0b1b46a694623c56d8274e74/%E3%83%A1%E3%83%AD%E3%83%87%E3%82%A3%E3%83%9A%E3%83%83%E3%83%88%E3%83%AC%E3%82%A4%E3%82%AF.jpeg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/5f25a30d0b1b46a694623c56d8274e74/%E3%83%A1%E3%83%AD%E3%83%87%E3%82%A3%E3%83%9A%E3%83%83%E3%83%88%E3%83%AC%E3%82%A4%E3%82%AF.jpeg"
+                                        ],
+                            "pin":  null,
+                            "sourceUrl":  "https://pal2.co.jp/attraction/gweq7s_0somk",
+                            "updatedAt":  "2026-08-30T09:59:03.062Z"
+                        },
+                        {
+                            "id":  "ik8kx154u",
+                            "number":  null,
+                            "name":  "縁日コーナー",
+                            "zone":  "エントランスゾーン",
+                            "zoneKey":  "entrance",
+                            "isAttraction":  false,
+                            "price":  500,
+                            "priceNotes":  "現金のみ\nご利用にはプレイチケットのご購入が必要です。\n1回券　500円\n3回券　1,300円",
+                            "tags":  [
+                                         "雨でもOK"
+                                     ],
+                            "heightLimit":  {
+                                                "min":  null,
+                                                "max":  null,
+                                                "label":  null
+                                            },
+                            "ageLimit":  {
+                                             "min":  null,
+                                             "max":  null,
+                                             "label":  null
+                                         },
+                            "catchcopy":  null,
+                            "description":  "「射的」や「ボールすくい」などの昔ながらの体験をしよう",
+                            "disclaimer":  "土日祝および特定日のみの営業。\n事前の予告なく営業時間の変更・休止をさせていただくことがあります。予めご了承ください。",
+                            "closedReason":  null,
+                            "image":  "assets/attractions/ik8kx154u.webp",
+                            "imageRemote":  "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/2e20c0b6cc0c4e5192c5ee1afef7d0ee/%E7%B8%81%E6%97%A51.jpeg",
+                            "gallery":  [
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/2e20c0b6cc0c4e5192c5ee1afef7d0ee/%E7%B8%81%E6%97%A51.jpeg",
+                                            "https://images.microcms-assets.io/assets/8ade298642b94f6a84920e36d765708d/0f4a83f6026f4ba8880eb21793e55da5/%E7%B8%81%E6%97%A52.jpeg"
+                                        ],
+                            "pin":  null,
+                            "sourceUrl":  "https://pal2.co.jp/attraction/ik8kx154u",
+                            "updatedAt":  "2026-08-30T09:55:20.614Z"
+                        }
+                    ]
+}

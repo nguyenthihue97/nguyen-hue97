@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>浜名湖パルパル</title>
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/guest.css">
+  <script>if (/[?&]embed\b/.test(location.search)) document.documentElement.classList.add('embed');</script>
+</head>
+<body class="guest">
+  <script>if (document.documentElement.classList.contains('embed')) document.body.classList.add('embed');</script>
+  <div class="phone">
+    <div class="island"></div>
+    <div class="statusbar">
+      <div><span class="time" id="clock">9:41</span></div>
+      <div>
+        <svg width="19" height="12" viewBox="0 0 19 12"><rect x="0" y="7.5" width="3.2" height="4.5" rx=".7"/><rect x="4.8" y="5" width="3.2" height="7" rx=".7"/><rect x="9.6" y="2.5" width="3.2" height="9.5" rx=".7"/><rect x="14.4" y="0" width="3.2" height="12" rx=".7"/></svg>
+        <svg width="17" height="12" viewBox="0 0 17 12"><path d="M8.5 3.2c2.3 0 4.4.9 5.9 2.4l1.1-1.1C13.7 2.7 11.2 1.5 8.5 1.5S3.3 2.7 1.5 4.5l1.1 1.1C4.1 4.1 6.2 3.2 8.5 3.2Z"/><path d="M8.5 6.8c1.4 0 2.6.5 3.5 1.4l1.1-1.1C11.8 5.9 10.2 5.1 8.5 5.1S5.2 5.9 3.9 7.1L5 8.2c.9-.9 2.1-1.4 3.5-1.4Z"/><circle cx="8.5" cy="10.5" r="1.5"/></svg>
+        <svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" stroke="#000" stroke-opacity=".35" fill="none"/><rect x="2" y="2" width="20" height="9" rx="2"/><path d="M25 4.5v4c.8-.3 1.5-1.3 1.5-2s-.7-1.7-1.5-2Z" fill-opacity=".4"/></svg>
+      </div>
+    </div>
+    <div class="screen">
+      <main id="view" class="view"></main>
+      <nav class="tabbar" id="tabbar"></nav>
+      <button class="banner" id="banner" type="button"></button>
+    </div>
+    <div class="toast-wrap" id="toasts" role="status" aria-live="polite"></div>
+    <div class="home-ind"><i></i></div>
+  </div>
+
+  <script src="data/attractions.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/guest.js"></script>
+</body>
+</html>

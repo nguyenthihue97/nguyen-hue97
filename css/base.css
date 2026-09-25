@@ -1,0 +1,73 @@
+/* Design tokens — values taken from the "ParuParu Park AI v2 JP" mockup */
+:root {
+  --ink: #16181d;
+  --ground: #ffffff;
+  --surf: #f1f1f4;          /* chips, inputs, secondary buttons */
+  --surf-2: #fafafc;        /* cards, sidebar */
+  --surf-3: #f7f7fa;        /* spec tiles, tip boxes */
+  --canvas: #f4f4f7;
+  --acc: #00a5e3;
+  --acc-hover: #008fc9;
+  --acc-ink: #00688f;
+  --acc-soft: #e4f4fc;
+  --acc-tint: #eaf7fd;
+  --div: rgba(22,24,29,.1);
+  --div2: rgba(22,24,29,.07);
+  --m72: rgba(22,24,29,.72);
+  --m60: rgba(22,24,29,.6);
+  --m52: rgba(22,24,29,.52);
+  --m45: rgba(22,24,29,.45);
+
+  --hot: #e5392b;  --hot-d: #a81d0c;  --hot-bg: #ffe9e4;  --hot-tint: #fff4f1;  --hot-line: rgba(229,57,43,.2);
+  --mid: #f0a01a;  --mid-bg: #fff2d4; --mid-ink: #8a5200;
+  --free: #17a34a; --free-bg: #e4f7ec; --free-ink: #0d7a3c;
+  --maint: #c2c2cd; --maint-bg: #ededf2;
+
+  --font: Archivo, "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, system-ui, sans-serif;
+  --mono: ui-monospace, Menlo, Consolas, "IBM Plex Mono", monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: var(--font); color: var(--ink); background: var(--ground); -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; padding: 0; transition: background .16s ease, color .16s ease, box-shadow .16s ease, transform .12s ease; }
+button:active { transform: scale(.965); }
+input, textarea, select { font: inherit; color: inherit; outline: none; transition: border-color .16s ease, box-shadow .16s ease; }
+input:focus, textarea:focus { border-color: var(--acc) !important; box-shadow: 0 0 0 3px rgba(0,165,227,.16); }
+a { color: var(--acc); text-decoration: none; }
+::selection { background: rgba(0,165,227,.2); }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: rgba(22,24,29,.16); border-radius: 9px; }
+::-webkit-scrollbar-track { background: transparent; }
+@keyframes scIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes scSpin { to { transform: rotate(360deg); } }
+.scIn { animation: scIn .32s cubic-bezier(.22,.8,.28,1) both; }
+.ic { flex: none; display: block; }
+.mono { font-family: var(--mono); }
+
+/* level pills (mockup: pill(k, small)) */
+.pill { display: inline-flex; align-items: center; font-size: 12.5px; font-weight: 700; letter-spacing: .005em; padding: 6px 13px; line-height: 1.2; border-radius: 999px; white-space: nowrap; }
+.pill.sm { font-size: 10.5px; padding: 4px 10px; }
+.k-busy { background: var(--hot-bg); color: var(--hot-d); }
+.k-mid { background: var(--mid-bg); color: var(--mid-ink); }
+.k-free { background: var(--free-bg); color: var(--free-ink); }
+.k-maint { background: var(--maint-bg); color: rgba(22,24,29,.5); }
+.k-nocam { background: #f3f3f7; color: rgba(22,24,29,.45); }
+/* level fills (map pins, number chips) */
+.f-busy { background: var(--hot); } .f-mid { background: var(--mid); } .f-free { background: var(--free); }
+.f-maint { background: var(--maint); } .f-nocam { background: #d8d8e0; }
+
+/* hour bars */
+.bars { display: flex; align-items: flex-end; gap: 8px; border-bottom: 1px solid var(--div2); }
+.bars > div { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; }
+.bars i { display: block; border-radius: 7px 7px 3px 3px; transition: height .4s cubic-bezier(.22,.8,.28,1); background: rgba(22,24,29,.12); }
+.bars i.hi { background: rgba(22,24,29,.3); }
+.bars i.now { background: linear-gradient(180deg, var(--hot) 0%, #ff8368 100%); }
+.bars i.off { background: repeating-linear-gradient(45deg, #ececf1 0 4px, #e2e2e9 4px 8px); }
+.bars-x { display: flex; justify-content: space-between; font-size: 10px; font-weight: 600; color: var(--m52); margin-top: 5px; }
+
+/* labels */
+.eyebrow { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--m52); }
+
+/* toast */
+.toast-wrap { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); z-index: 1000; display: flex; flex-direction: column; gap: 8px; align-items: center; pointer-events: none; }
+.toast { background: var(--ink); color: #fff; padding: 11px 18px; border-radius: 14px; font-size: 13px; font-weight: 700; box-shadow: 0 12px 34px -10px rgba(22,24,29,.5); animation: scIn .25s ease; max-width: min(90vw, 520px); text-align: center; overflow-wrap: anywhere; }

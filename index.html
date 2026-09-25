@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>混雑状況の管理</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    body { background: var(--canvas); }
+    .canvas { min-height: 100vh; padding: 30px 34px 70px; }
+    .hd { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 6px; flex-wrap: wrap; }
+    .hd .ey { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--acc); }
+    .hd h1 { font-size: 34px; font-weight: 800; letter-spacing: -.025em; line-height: 1.08; margin: 7px 0 0; }
+    .toggle { display: flex; gap: 4px; padding: 4px; background: #ececf1; border-radius: 999px; }
+    .toggle button { border-radius: 999px; padding: 10px 20px; font-weight: 700; font-size: 13px; color: var(--m60); }
+    .toggle button.on { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(22,24,29,.14); }
+    .app { display: flex; gap: 44px; padding-top: 34px; align-items: flex-start; flex-wrap: wrap; }
+    .cap { font-size: 11.5px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--m45); }
+    .device { width: 402px; height: 874px; border-radius: 48px; overflow: hidden; background: #fff; box-shadow: 0 40px 80px rgba(0,0,0,.18), 0 0 0 1px rgba(0,0,0,.12); margin-top: 14px; }
+    .device iframe { border: 0; width: 100%; height: 100%; display: block; }
+    .notes { flex: 1; min-width: 280px; max-width: 400px; padding-top: 30px; }
+    .note { padding: 16px 18px; margin-top: 12px; background: #fff; border: 1px solid var(--div2); border-radius: 20px; box-shadow: 0 1px 2px rgba(22,24,29,.04); }
+    .note b { font-size: 14px; font-weight: 700; display: block; }
+    .note p { font-size: 13px; line-height: 1.55; color: rgba(22,24,29,.58); margin: 5px 0 0; text-wrap: pretty; }
+    .hint { font-size: 12px; color: rgba(22,24,29,.48); margin-top: 16px; line-height: 1.5; }
+    .hint a { font-weight: 700; color: var(--acc-ink); }
+    .admin { padding-top: 34px; }
+    .admin .frame { background: #fff; max-width: 1400px; border-radius: 26px; overflow: hidden; box-shadow: 0 1px 2px rgba(22,24,29,.05), 0 18px 50px -18px rgba(22,24,29,.22); height: calc(100vh - 170px); min-height: 700px; }
+    .admin iframe { border: 0; width: 100%; height: 100%; display: block; }
+    [hidden] { display: none !important; }
+    @media (max-width: 520px) { .canvas { padding: 20px 16px 40px; } .device { width: 100%; height: 780px; border-radius: 36px; } }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="hd">
+      <div><div class="ey">AIカメラシステム・パルパル</div><h1>混雑状況の管理</h1></div>
+      <div class="toggle" role="tablist">
+        <button id="tApp" class="on" role="tab">ゲストアプリ</button>
+        <button id="tAdmin" role="tab">管理システム</button>
+      </div>
+    </div>
+
+    <section class="app" id="app">
+      <div>
+        <div class="cap">iPhone・ゲストアプリ</div>
+        <div class="device"><iframe src="guest.html?embed" title="ゲストアプリ"></iframe></div>
+      </div>
+      <div class="notes">
+        <div class="cap" style="padding-bottom:4px">デザインノート</div>
+        <div class="note"><b>マップを起点にする</b><p>公式の園内マップに、押せる番号タイルを重ねています。番号は公式マップの表記と同じです（メガコースターは3、ドン・ブラーコは15）。</p></div>
+        <div class="note"><b>混雑度は2通りで読み取れる</b><p>色はひと目で把握するため、人数と待ち時間は判断のため。</p></div>
+        <div class="note"><b>すべての画面が次の行動につながる</b><p>アトラクション詳細は固定ボタンで終わります。経路案内か、お気に入り登録。</p></div>
+        <div class="note"><b>管理画面とアプリは同じ数値を参照</b><p>現在の人数・収容率・待ち時間は、すべて同じカメラ計測から取得しています。管理画面で送った通知はアプリに届きます。</p></div>
+        <div class="hint">マップのピン、リストの行、下部タブを押すと一連の流れを確認できます。<br>
+          単独で開く：<a href="guest.html">ゲストアプリ</a>・<a href="admin.html">管理システム</a>・<a href="data/attractions.json">attractions.json</a></div>
+      </div>
+    </section>
+
+    <section class="admin" id="admin" hidden>
+      <div class="frame"><iframe id="adminFrame" title="管理システム" data-src="admin.html"></iframe></div>
+    </section>
+  </div>
+  <script>
+    (function () {
+      const tApp = document.getElementById('tApp'), tAdmin = document.getElementById('tAdmin');
+      const app = document.getElementById('app'), admin = document.getElementById('admin'), f = document.getElementById('adminFrame');
+      function show(mode) {
+        const isApp = mode !== 'admin';
+        tApp.classList.toggle('on', isApp); tAdmin.classList.toggle('on', !isApp);
+        app.hidden = !isApp; admin.hidden = isApp;
+        if (!isApp && !f.src) f.src = f.dataset.src;
+        try { localStorage.setItem('pp.canvasMode', mode); } catch (e) {}
+      }
+      tApp.onclick = () => show('app'); tAdmin.onclick = () => show('admin');
+      let m = 'app'; try { m = localStorage.getItem('pp.canvasMode') || 'app'; } catch (e) {}
+      show(location.hash === '#admin' ? 'admin' : m);
+    })();
+  </script>
+</body>
+</html>
