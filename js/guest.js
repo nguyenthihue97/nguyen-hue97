@@ -606,9 +606,39 @@
     $banner.innerHTML = `<div class="bh"><i>${icon('tbell', 12, '', 2.4)}</i>浜名湖パルパル<time>たった今</time></div><h4>${esc(n.title)}</h4><p>${esc(n.body)}</p>`;
     $banner.classList.add('show');
     clearTimeout(checkBanner.t);
-    checkBanner.t = setTimeout(() => $banner.classList.remove('show'), 6000);
+    checkBanner.t = setTimeout(hideBanner, 6000);
   }
-  $banner.addEventListener('click', () => { $banner.classList.remove('show'); location.hash = '#/news'; });
+  /* banner: tap → お知らせ, swipe up → dismiss (follows the finger, snaps back if not far enough) */
+  let bDrag = null;
+  const hideBanner = () => { clearTimeout(checkBanner.t); $banner.style.transition = ''; $banner.style.transform = ''; $banner.classList.remove('show'); };
+  $banner.addEventListener('pointerdown', e => {
+    if (!$banner.classList.contains('show')) return;
+    bDrag = { y: e.clientY, t: performance.now(), dy: 0, moved: false, id: e.pointerId };
+    clearTimeout(checkBanner.t);                                            // don't auto-hide while held
+    try { $banner.setPointerCapture(e.pointerId); } catch (_) { /* synthetic pointer */ }
+  });
+  $banner.addEventListener('pointermove', e => {
+    if (!bDrag || e.pointerId !== bDrag.id) return;
+    const dy = e.clientY - bDrag.y;
+    if (!bDrag.moved && Math.abs(dy) < 6) return;
+    bDrag.moved = true;
+    bDrag.dy = dy < 0 ? dy : dy / 4;                                        // free upward, resist downward
+    $banner.style.transition = 'none';
+    $banner.style.transform = `translateY(${bDrag.dy}px)`;
+  });
+  const endBannerDrag = e => {
+    if (!bDrag || e.pointerId !== bDrag.id) return;
+    const d = bDrag; bDrag = null;
+    if (!d.moved) { if (e.type === 'pointerup') { hideBanner(); location.hash = '#/news'; } return; }   // a tap
+    const fast = d.dy / Math.max(1, performance.now() - d.t) < -0.5;       // quick flick up
+    if (d.dy < -$banner.offsetHeight * 0.3 || fast) hideBanner();
+    else {                                                                  // snap back, resume auto-hide
+      $banner.style.transition = ''; $banner.style.transform = '';
+      checkBanner.t = setTimeout(hideBanner, 4000);
+    }
+  };
+  $banner.addEventListener('pointerup', endBannerDrag);
+  $banner.addEventListener('pointercancel', endBannerDrag);
   function checkWatches() {
     const w = store.get('watches', {}), now = P.simNow();
     let changed = false;

@@ -235,7 +235,7 @@ body.embed .phone { width: 100%; height: 100vh; max-height: none; border-radius:
 .pop input { accent-color: var(--acc); width: 16px; height: 16px; }
 
 /* ---------- push banner ---------- */
-.banner { position: absolute; left: 10px; right: 10px; top: 58px; z-index: 45; background: rgba(255,255,255,.97); backdrop-filter: blur(12px); border-radius: 22px; padding: 14px 15px; box-shadow: 0 12px 34px -8px rgba(22,24,29,.35); text-align: left;
+.banner { position: absolute; left: 10px; right: 10px; top: 58px; z-index: 45; background: rgba(255,255,255,.97); backdrop-filter: blur(12px); border-radius: 22px; padding: 14px 15px; box-shadow: 0 12px 34px -8px rgba(22,24,29,.35); text-align: left; touch-action: none; user-select: none; cursor: grab;
   transform: translateY(calc(-100% - 90px)); visibility: hidden; transition: transform .35s cubic-bezier(.2,.9,.3,1.2), visibility 0s .35s; }
 .banner.show { transform: none; visibility: visible; transition: transform .35s cubic-bezier(.2,.9,.3,1.2); }
 .banner .bh { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; }
@@ -270,3 +270,8 @@ body.embed .phone { width: 100%; height: 100vh; max-height: none; border-radius:
 .acard.tap:hover { box-shadow: 0 2px 4px rgba(22,24,29,.06), 0 10px 22px -12px rgba(22,24,29,.25); }
 .acard .near { font-style: normal; margin-left: 8px; padding: 2px 7px; border-radius: 999px; background: var(--acc-soft); color: var(--acc-ink); letter-spacing: 0; font-size: 10px; }
 .acard.hot .near { background: #fff; color: var(--hot-d); }
+
+/* no double-tap zoom when tapping buttons quickly (e.g. ♥ several times); pinch-zoom still works */
+html, body { touch-action: manipulation; }
+button, a, [data-go], [data-fav], .chip { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.heart { user-select: none; -webkit-user-select: none; }
