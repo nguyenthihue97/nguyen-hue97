@@ -69,7 +69,7 @@
       const top = P.openRides().filter(a => a.zoneKey === z.key).map(a => ({ a, l: P.live(a, now) })).sort((x, y) => y.l.occ - x.l.occ)[0];
       const from = P.ZONES.map(x => P.zoneStats(x.key, now)).filter(x => x.key !== z.key).sort((x, y) => x.occ - y.occ)[0];
       const t = sinceAbove(d => zoneOccAt(z.key, d), .6, now);
-      out.push({ key: 'zone-' + z.key + '-' + t.getHours(), lv: 3, tag: 'レベル3・緊急', t, hot: true,
+      out.push({ key: 'zone-' + z.key + '-' + Math.floor(P.hourOf(t)), lv: 3, tag: 'レベル3・緊急', t, hot: true,
         title: `${z.name}：現在の収容率 ${pct(s.occ)}`,
         body: `${top ? top.a.name + 'の入口誘導' : '入口誘導'}へスタッフ3名の配置を推奨します。`,
         action: `${from.name}から${top ? top.a.name : z.name}入口へスタッフ3名を配置` });
@@ -81,10 +81,10 @@
       for (let m = 5; m <= 90; m += 5) {
         if (P.occAt(a, new Date(now - (m - 5) * 60e3), false) >= P.occAt(a, new Date(now - m * 60e3), false)) rising = m; else break;
       }
-      const fut = new Date(now.getTime() + 20 * 60e3); fut.setMinutes(Math.round(fut.getMinutes() / 5) * 5);
+      const fut = P.roundMin(new Date(now.getTime() + 20 * 60e3), 5);
       const fw = P.predictWait(a, fut);
       const t = sinceAbove(d => P.occAt(a, d, false), a.cfg.thBusy / 100, now);
-      out.push({ key: 'att-' + a.id + '-' + t.getHours(), lv: 2, tag: 'レベル2', t,
+      out.push({ key: 'att-' + a.id + '-' + Math.floor(P.hourOf(t)), lv: 2, tag: 'レベル2', t,
         title: rising >= 10 ? `${a.name}の待機列が${rising}分間、増加し続けています` : `${a.name}の収容率が${pct(l.occ)}に達しています`,
         body: fw > l.wait ? `${P.hhmm(fut)}に待ち時間${fw}分へ到達する見込みです。` : `現在の待ち時間は${l.wait}分です。補助列の開放を推奨します。`,
         action: `補助列を開放：${a.name}` });
@@ -683,7 +683,7 @@
       const used = P.cameras().map(c => parseInt(c.code.slice(4), 10));
       let n = 1; while (used.includes(n)) n++;
       return { camId: null, code: 'CAM-' + String(n).padStart(2, '0'), place: '', zone: 'entrance', model: 'AXIS M3086-V', res: '1920×1080', fps: 25,
-        installed: `${String(P.simNow().getMonth() + 1).padStart(2, '0')}/${P.simNow().getFullYear()}`, status: '未有効化', rides: [], role: '待機列の計測',
+        installed: P.monthYear(P.simNow()), status: '未有効化', rides: [], role: '待機列の計測',
         sens: 70, interval: 5, minConf: 85, alertLost: true, clip: false, edge: true, step: 'info' };
     }
     const c = P.cameras().find(x => x.code === code);
@@ -826,7 +826,7 @@
   function pageNotices() {
     const now = P.simNow();
     const all = P.notifications();
-    const sentToday = all.filter(n => n.status === 'sent' && new Date(n.sentAt).toDateString() === now.toDateString());
+    const sentToday = all.filter(n => n.status === 'sent' && P.dayKey(new Date(n.sentAt)) === P.dayKey(now));
     const q = ntSt.q.trim().toLowerCase();
     let list = all.filter(n => (ntSt.type === 'all' || n.type === ntSt.type) && (ntSt.area === 'all' || n.area === ntSt.area)
       && (ntSt.status === 'all' || P.notifStatus(n, now) === ntSt.status) && (!q || (n.title + ' ' + n.body).toLowerCase().includes(q)));

@@ -188,7 +188,7 @@
       const pct = Math.max(10, Math.round((l.occ / avg - 1) * 100 / 5) * 5);
       let best = null;
       for (let i = s.current + 1; i < P.SLOTS; i++) {
-        const tt = P.atHour(now, 10 + (i + .5) * 6.5 / P.SLOTS); tt.setMinutes(Math.round(tt.getMinutes() / 15) * 15);
+        const tt = P.roundMin(P.atHour(now, 10 + (i + .5) * 6.5 / P.SLOTS), 15);
         const w = P.predictWait(a, tt);
         if (!best || w < best.w) best = { t: tt, w };
       }
@@ -199,7 +199,7 @@
       for (let i = s.current; i <= upto; i++) if (s.vals[i] < s.vals[best]) best = i;
       if (best === s.current) advice = '今後2時間で最も空く時間帯です。今のうちに。';
       else {
-        const tt = P.atHour(now, 10 + (best + .5) * 6.5 / P.SLOTS); tt.setMinutes(Math.round(tt.getMinutes() / 5) * 5);
+        const tt = P.roundMin(P.atHour(now, 10 + (best + .5) * 6.5 / P.SLOTS), 5);
         advice = `${P.hhmm(tt)}ごろが最も空く見込みです（待ち約${P.predictWait(a, tt)}分）。`;
       }
     }

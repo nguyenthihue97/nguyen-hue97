@@ -88,7 +88,10 @@ Admin và app khách mở trong cùng trình duyệt sẽ chia sẻ trạng thá
   - Mỗi lần đổi trạng thái được ghi vào カメラログ và 運用ログ. Trang chi tiết camera có dòng 処理負荷.
   - Đây là giới hạn của thiết bị, khác với ngưỡng 混雑 / 収容超過 của hàng chờ.
   - 信号断 / 整備中 / 未有効化 vẫn là trạng thái đặt thủ công.
-- **Số người camera đếm** là dữ liệu mô phỏng: đường cong theo giờ + nhiễu có tính tất định, cập nhật 5 giây một lần. Ngoài giờ mở cửa, app chạy theo đồng hồ demo từ 14:32.
+- **Số người camera đếm** là dữ liệu mô phỏng: đường cong theo giờ + nhiễu có tính tất định, cập nhật 5 giây một lần. 
+  - Mọi giờ tính theo **giờ Nhật (JST)**, không phụ thuộc múi giờ thiết bị. Vì vậy máy tính, điện thoại, app khách và admin cùng một thời điểm luôn thấy cùng mức đông.
+  - Ngoài giờ mở cửa, app chạy đồng hồ demo lặp 14:32 → 16:27. Vị trí của đồng hồ này suy ra từ giờ thực, nên mọi thiết bị cùng thấy một giờ demo.
+  - Riêng dữ liệu admin chỉnh sửa vẫn chỉ lưu trong trình duyệt đó (`localStorage`); muốn đồng bộ giữa các máy cần thêm backend.
 - Khi có API camera thật: thay `live()` / `cameraCountAt()` trong `js/core.js`, các màn hình không cần sửa.
 
 ## Cấu trúc

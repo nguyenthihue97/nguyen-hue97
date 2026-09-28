@@ -93,23 +93,26 @@
   const throughput = a => { const c = cfg(a); return c.seats > 0 && c.cycle > 0 ? Math.round(c.seats * 60 / c.cycle) : 0; };
 
   /* ---------- clock ----------
-   * Inside opening hours → real time. Outside → demo clock starting 14:32 today,
-   * shared between tabs through the store so guest & admin show the same moment. */
+   * All park time is Japan time (JST, UTC+9) whatever the device's time zone, so every device
+   * (PC, phone, guest, admin) computes the same crowd for the same moment.
+   * Inside opening hours → real time. Outside → a demo clock that loops 14:32 → 16:27; its position
+   * comes from the real time (not from when the app was opened), so all devices share it too. */
+  const JST = 9 * 3600e3, DAY = 864e5, DEMO_LOOP = 115 * 60e3;
+  const jst = d => new Date(+d + JST);                  // read with getUTC*() → Japan wall clock
+  const hourOf = d => (((+d + JST) % DAY) + DAY) % DAY / 3600e3;
+  const atHour = (ref, h) => new Date(Math.floor((+ref + JST) / DAY) * DAY - JST + h * 3600e3);   // JST day of ref, h o'clock
+  const roundMin = (d, step, how) => new Date(Math[how || 'round'](+d / (step * 60e3)) * step * 60e3);   // JST offset is whole hours
   function simNow() {
-    const d = new Date();
-    const h = d.getHours() + d.getMinutes() / 60;
+    const d = new Date(), h = hourOf(d);
     if (h >= OPEN_H && h < CLOSE_H) return d;
-    let start = store.get('demoStart', 0);
-    if (!start || Date.now() - start > 2 * 3600e3) { start = Date.now(); store.set('demoStart', start); }
-    const base = new Date(d); base.setHours(14, 32, 0, 0);
-    return new Date(base.getTime() + (Date.now() - start));
+    return new Date(atHour(d, 14 + 32 / 60).getTime() + Date.now() % DEMO_LOOP);
   }
   const pad = n => String(n).padStart(2, '0');
-  const hhmm = d => pad(d.getHours()) + ':' + pad(d.getMinutes());
+  const hhmm = d => { const j = jst(d); return pad(j.getUTCHours()) + ':' + pad(j.getUTCMinutes()); };
   const WD = ['日', '月', '火', '水', '木', '金', '土'];
-  const dateLabel = d => `${d.getMonth() + 1}/${d.getDate()}（${WD[d.getDay()]}）${hhmm(d)}`;
-  const hourOf = d => d.getHours() + d.getMinutes() / 60 + d.getSeconds() / 3600;
-  const atHour = (ref, h) => { const d = new Date(ref); d.setHours(0, 0, 0, 0); return new Date(d.getTime() + h * 3600e3); };
+  const dateLabel = d => { const j = jst(d); return `${j.getUTCMonth() + 1}/${j.getUTCDate()}（${WD[j.getUTCDay()]}）${hhmm(d)}`; };
+  const dayKey = d => { const j = jst(d); return `${j.getUTCFullYear()}-${j.getUTCMonth()}-${j.getUTCDate()}`; };
+  const monthYear = d => { const j = jst(d); return `${pad(j.getUTCMonth() + 1)}/${j.getUTCFullYear()}`; };
 
   /* ---------- deterministic noise ---------- */
   function hash(str) {
@@ -118,7 +121,7 @@
     h += h << 13; h ^= h >>> 7; h += h << 3; h ^= h >>> 17; h += h << 5;
     return ((h >>> 0) % 100000) / 100000;
   }
-  const daySeed = d => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+  const daySeed = dayKey;
   function smoothNoise(key, d) {
     const m = hourOf(d) * 60 / 7;
     const k = Math.floor(m), f = m - k, s = daySeed(d);
@@ -548,7 +551,7 @@
     }
     const dir = a.pin.x > from.x + 6 ? '湖側へ向かう途中。' : a.pin.y < from.y - 8 ? 'モンテ方面へ向かう途中。' : '近くで、';
     if (peakT && t0 - peakT > 10 * 60e3) {
-      const r = new Date(peakT); r.setMinutes(Math.floor(r.getMinutes() / 5) * 5);
+      const r = roundMin(peakT, 5, 'floor');
       return `${dir}${hhmm(r)}から混雑が下がり続けています。`;
     }
     return `${dir}現在の待ち時間は${l.wait}分と短めです。`;
@@ -590,7 +593,7 @@
     DATA, ALL, ZONES, zoneByKey, FACILITIES, HOURS, LOCATION, COLORS,
     guestPos, setGuestPos, resetGuestPos, nearRadius, isNearGuest,
     rides, byId, cfg, throughput, defaults, SPEC,
-    store, simNow, hhmm, dateLabel, atHour, hourOf, hash,
+    store, simNow, hhmm, dateLabel, atHour, hourOf, roundMin, dayKey, monthYear, hash,
     live, measurable, waitCalc, LEVEL_LABEL, closedLabel, predictWait, waitFromCount, closedReason, openRides, occAt,
     SLOTS, attractionSeries, parkSeries, parkGuests, parkGuestsAt, zoneStats,
     metres, distanceTo, walkMin,
