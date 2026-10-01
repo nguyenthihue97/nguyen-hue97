@@ -91,7 +91,8 @@
       return `<button class="mpin f-${l.level}" style="left:${p.x}%;top:${p.y}%" data-go="#/a/${p.a.id}" title="${esc(p.a.name)}">${p.a.number || ''}</button>`;
     }).join('');
     const near = P.rides().filter(a => a.pin).map(a => ({ a, l: P.live(a, now), m: P.distanceTo(a) }))
-      .filter(x => !x.l.closed && !x.l.nocam).sort((x, y) => x.m - y.m).slice(0, 3);
+      .filter(x => !x.l.closed && !x.l.nocam).sort((x, y) => x.m - y.m).slice(0, 3)
+      .sort((x, y) => ({ free: 0, mid: 1, busy: 2 })[x.l.level] - ({ free: 0, mid: 1, busy: 2 })[y.l.level] || x.m - y.m);   // 3 nearest, 空き → やや混雑 → 混雑
     return appbar() + `
       <div class="gmap">
         <div class="mapbox" role="img" aria-label="パルパル園内マップ">
