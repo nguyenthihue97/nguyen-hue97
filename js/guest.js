@@ -286,8 +286,8 @@
       ${Object.keys(watches).filter(id => P.byId(id)).map(id => `<div class="watch">${icon('clock2', 15)}<span>${esc(P.byId(id).name)}：待ち時間が減ったら通知します</span><button data-unwatch="${id}" aria-label="解除">${icon('x', 15)}</button></div>`).join('')}
       ${items.map(n => {
         const kind = n.type === 'watch' ? '空き' : (P.NOTIF_TYPES[n.type] || { label: 'お知らせ' }).label;
-        const isRead = r.has(n.id);                              // red highlight only until the guest opens it
-        return `<div class="acard tap ${n.type === 'crowd' && !isRead ? 'hot' : ''} ${isRead ? 'read' : ''}" data-read="${esc(n.id)}" ${n.att ? `data-go="#/a/${n.att}"` : ''}>
+        const isRead = r.has(n.id);                              // every unread notice is red until the guest opens it
+        return `<div class="acard tap ${isRead ? 'read' : 'hot'}" data-read="${esc(n.id)}" ${n.att ? `data-go="#/a/${n.att}"` : ''}>
           <div class="top"><div class="kind">${kind}${n.att ? `<em class="near">AI・${n.dist}m先</em>` : ''}</div><time>${P.hhmm(new Date(n.t))}</time></div>
           <h3>${esc(n.title)}</h3><p>${esc(n.body)}</p>${r.has(n.id) ? '' : '<span class="new"></span>'}
         </div>`;
