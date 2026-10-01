@@ -276,7 +276,7 @@
   /* ---------- お知らせ ---------- */
   function newsView() {
     const r = readSet();
-    const items = inbox();
+    const items = inbox().sort((x, y) => r.has(x.id) - r.has(y.id) || y.t - x.t);   // unread first, newest first within each group
     const unread = items.filter(n => !r.has(n.id)).length;
     const watches = store.get('watches', {});
     const html = appbar() + `
