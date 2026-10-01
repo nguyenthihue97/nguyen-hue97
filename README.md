@@ -105,3 +105,5 @@ assets/ map.webp  logo.svg  zone-sample.png  attractions/*.webp
 ```
 
 Xoá dữ liệu demo: DevTools → Application → Local Storage → xoá các key `pp.v2.*`.
+
+**Cập nhật bản demo (GitHub Pages):** các file JS/CSS được gắn số phiên bản `?v=YYYYMMDD` trong `index.html`, `guest.html`, `admin.html`. Mỗi lần sửa code trước khi push, đổi số này để trình duyệt tải bản mới ngay (GitHub Pages cho trình duyệt giữ bản cũ tới 10 phút).
