@@ -275,3 +275,7 @@ body.embed .phone { width: 100%; height: 100vh; max-height: none; border-radius:
 html, body { touch-action: manipulation; }
 button, a, [data-go], [data-fav], .chip { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 .heart { user-select: none; -webkit-user-select: none; }
+
+/* notices: read state (red highlight + dot only while unread) */
+.acard.read h3 { color: rgba(22,24,29,.72); }
+.ahead .readall { margin-left: 10px; border: 0; background: var(--acc-soft); color: var(--acc-ink); font: inherit; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; cursor: pointer; }

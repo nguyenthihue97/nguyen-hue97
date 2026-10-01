@@ -279,19 +279,19 @@
     const unread = items.filter(n => !r.has(n.id)).length;
     const watches = store.get('watches', {});
     const html = appbar() + `
-      <div class="ahead"><div class="h23">お知らせ</div><span>${unread} 新規</span></div>
+      <div class="ahead"><div class="h23">お知らせ</div><span>${unread} 新規${unread ? '<button class="readall" data-readall>すべて既読</button>' : ''}</span></div>
       <div class="nearnote">${icon('tmap', 15)}<span>現在地（${esc(P.guestPos().name === '現在地' ? '入口付近' : P.guestPos().name + '付近')}）から<b>半径${P.nearRadius()}m</b>以内のアトラクションのAI通知を表示しています</span>
         ${store.get('guestPos', null) ? '<button data-resetpos>入口に戻す</button>' : ''}</div>
       <div class="gap14"></div>
       ${Object.keys(watches).filter(id => P.byId(id)).map(id => `<div class="watch">${icon('clock2', 15)}<span>${esc(P.byId(id).name)}：待ち時間が減ったら通知します</span><button data-unwatch="${id}" aria-label="解除">${icon('x', 15)}</button></div>`).join('')}
       ${items.map(n => {
         const kind = n.type === 'watch' ? '空き' : (P.NOTIF_TYPES[n.type] || { label: 'お知らせ' }).label;
-        return `<div class="acard ${n.type === 'crowd' ? 'hot' : ''} ${n.att ? 'tap' : ''}" ${n.att ? `data-go="#/a/${n.att}"` : ''}>
+        const isRead = r.has(n.id);                              // red highlight only until the guest opens it
+        return `<div class="acard tap ${n.type === 'crowd' && !isRead ? 'hot' : ''} ${isRead ? 'read' : ''}" data-read="${esc(n.id)}" ${n.att ? `data-go="#/a/${n.att}"` : ''}>
           <div class="top"><div class="kind">${kind}${n.att ? `<em class="near">AI・${n.dist}m先</em>` : ''}</div><time>${P.hhmm(new Date(n.t))}</time></div>
           <h3>${esc(n.title)}</h3><p>${esc(n.body)}</p>${r.has(n.id) ? '' : '<span class="new"></span>'}
         </div>`;
       }).join('') || '<div class="empty">お知らせはまだありません</div>'}`;
-    setTimeout(() => { if (route().name === 'news') store.set('guestRead', items.map(n => n.id)); }, 1500);
     return html;
   }
 
@@ -541,6 +541,13 @@
     if ('avoid' in e.target.dataset) { rs.avoid = e.target.checked; render(true); }
   });
   $view.addEventListener('click', e => {
+    const card = e.target.closest('[data-read]');                  // opening a notice marks it read
+    if (card && !e.target.closest('button')) {
+      const read = store.get('guestRead', []);
+      if (!read.includes(card.dataset.read)) store.set('guestRead', read.concat(card.dataset.read));
+      if (!card.dataset.go) { render(true); return; }
+    }
+    if (e.target.closest('[data-readall]')) { store.set('guestRead', inbox().map(n => n.id)); render(true); return; }
     const el = e.target.closest('[data-go],[data-back],[data-filter],[data-fav],[data-start-route],[data-clear-extra],[data-unwatch],[data-rs],[data-opt],[data-watch],[data-extra],[data-next],[data-end-route],[data-toast],[data-resetpos]');
     if (!el) return;
     const d = el.dataset;
