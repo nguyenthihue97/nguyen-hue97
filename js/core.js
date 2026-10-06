@@ -167,14 +167,19 @@
     const c = cfg(a);
     const reason = closedReason(a);
     if (reason) return { closed: true, reason, label: closedLabel(reason), people: 0, cap: c.cap, occ: 0, level: 'maint', wait: 0 };
-    if (!camerasForRide(a.id).length) return { nocam: true, label: 'カメラ未設置', people: 0, cap: c.cap, occ: 0, level: 'nocam', wait: 0 };
+    const cams = camerasForRide(a.id);
+    if (!cams.length) return { nocam: true, label: 'カメラ未設置', people: 0, cap: c.cap, occ: 0, level: 'nocam', wait: 0 };
+    // every queue camera is down (信号断 / 整備中 / 未有効化): no live count, so the guest sees 更新中 instead of a number
+    if (cams.every(deadCam)) return { nocam: true, stale: true, label: '更新中', people: 0, cap: c.cap, occ: 0, level: 'nocam', wait: 0 };
     const people = Math.round(occAt(a, d, true) * c.cap);
     const occ = people / c.cap;
     const level = levelFor(a, occ);
     const calc = waitCalc(a, d);
-    return { closed: false, people, cap: c.cap, occ, level, label: LEVEL_LABEL[level], wait: calc.wait };
+    return { closed: false, people, cap: c.cap, occ, level, label: LEVEL_LABEL[level], wait: calc.wait, estimated: calc.estimated };
   }
-  const measurable = a => !closedReason(a) && camerasForRide(a.id).length > 0;
+  const hasCam = a => !closedReason(a) && camerasForRide(a.id).length > 0;
+  // live data available: open, with at least one working queue camera (used by the AI route, alternatives and dashboards)
+  const measurable = a => hasCam(a) && camerasForRide(a.id).some(c => !deadCam(c));
 
   /* ---------- wait time: one queue camera per ride ----------
    * people = sum of the ride's queue cameras (each its own stretch), average of the last 3 minutes (so a few people moving don't jitter it)
@@ -225,7 +230,7 @@
   }
   function parkGuestsAt(d, jitter) {
     let s = 0;
-    rides().forEach(a => { if (measurable(a)) s += Math.round(occAt(a, d, jitter) * cfg(a).cap); });
+    rides().forEach(a => { if (hasCam(a)) s += Math.round(occAt(a, d, jitter) * cfg(a).cap); });
     return Math.round(s * 1.2 + 120 * dayCurve(hourOf(d), 0) + 40);
   }
   const parkGuests = d => parkGuestsAt(d || simNow(), true);

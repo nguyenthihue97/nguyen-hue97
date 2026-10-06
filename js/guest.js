@@ -69,7 +69,7 @@
     return `<button class="rrow ${off ? 'dim' : ''}" ${off ? 'disabled' : `data-go="#/a/${a.id}"`}>
       <div class="rthumb" style="${a.image ? `background-image:url('${a.image}')` : ''}">${a.number ? `<span class="no f-${l.level}">${a.number}</span>` : ''}</div>
       <div class="bd"><div class="nm">${esc(a.name)}</div><div class="mt">${esc(meta)}</div><div class="pw">${levelPill(l, true)}</div></div>
-      <div class="wt"><div>${showWait ? `<b>${l.wait} 分</b><small>待ち</small>` : ''}</div>
+      <div class="wt"><div>${showWait ? `<b>${l.wait} 分</b><small>${l.estimated ? '待ち（推定）' : '待ち'}</small>` : ''}</div>
         <svg width="8" height="14" viewBox="0 0 8 14" fill="none" stroke="rgba(22,24,29,.1)" stroke-width="2"><path d="M1 1l6 6-6 6"/></svg></div>
     </button>`;
   }
@@ -182,7 +182,7 @@
     if (off) {
       alts = P.alternatives(a, 2, now);
       const alt = alts[0];
-      advice = `このアトラクションは${l.closed ? l.label : '計測準備中'}です。` + (alt ? `おすすめ：${alt.a.name}（${alt.m}m先・待ち${alt.l.wait}分）` : '');
+      advice = (l.stale ? 'カメラの信号が途切れているため、待ち時間を更新中です。' : `このアトラクションは${l.closed ? l.label : '計測準備中'}です。`) + (alt ? `おすすめ：${alt.a.name}（${alt.m}m先・待ち${alt.l.wait}分）` : '');
     } else if (l.level === 'busy') {
       alts = P.alternatives(a, 2, now);
       const avg = s.vals.reduce((x, y) => x + y, 0) / s.vals.length || 1;
@@ -223,7 +223,7 @@
         <div class="dmeta">${esc([a.zone, m != null ? m + 'm' : null, off ? null : l.people + ' 人'].filter(Boolean).join('・'))}</div>
       </div>
       <div class="dstats">
-        <div><div class="eyebrow">${off ? '状態' : '待ち時間'}</div>${off ? `<b class="txt">${esc(l.label)}</b>` : `<b>${l.wait}<span>分</span></b>`}</div>
+        <div><div class="eyebrow">${off ? '状態' : l.estimated ? '待ち時間（推定）' : '待ち時間'}</div>${off ? `<b class="txt">${esc(l.label)}</b>` : `<b>${l.wait}<span>分</span></b>`}</div>
         <div><div class="eyebrow">待機中</div><b>${off ? 0 : l.people}<span>/${l.cap}</span></b></div>
       </div>
       <div class="dbody">

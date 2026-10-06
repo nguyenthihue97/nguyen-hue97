@@ -41,6 +41,7 @@
   const REASON_STATUS = r => ['点検', '長期整備', '整備'].includes(r) ? '整備中' : '休止中';
   function statusOf(l) {
     if (l.closed) return REASON_STATUS(l.reason);
+    if (l.stale) return 'カメラ停止中';
     if (l.nocam) return 'カメラ未割当';
     return P.LEVEL_LABEL[l.level];
   }
@@ -284,6 +285,7 @@
     const boxesB = [[14, 34, 20, 36, 0], [44, 30, 18, 34, 1], [70, 40, 18, 30, 0]];
     let ops;
     if (l.closed) ops = `${l.label}のため運行を停止しています。再開前に待機列の案内表示を確認してください。`;
+    else if (l.stale) ops = '待機列カメラがすべて停止しているため計測値がありません。ゲストアプリでは「更新中」と表示しています。カメラの点検を保守へ依頼してください。';
     else if (l.nocam) ops = 'カメラが未割当のため計測値がありません。アトラクションを編集でカメラを割り当ててください。';
     else if (l.level === 'busy') {
       const since = sinceAbove(d => P.occAt(a, d, false), c.thBusy / 100, now);
@@ -332,7 +334,7 @@
   /* 待ち時間の算出方法: queue camera count ÷ theoretical capacity */
   function waitCalcBlock(a, l, c, now, thr, dec) {
     if (l.closed || l.nocam) return `<div class="pad"><div class="eyebrow">待ち時間の算出方法</div>
-      <div class="note" style="margin-top:8px">${l.closed ? '運行停止中のため待ち時間は算出していません。' : 'カメラが未割当のため待ち時間を算出できません。'}</div></div>`;
+      <div class="note" style="margin-top:8px">${l.closed ? '運行停止中のため待ち時間は算出していません。' : l.stale ? '待機列カメラがすべて停止しているため待ち時間を算出できません。' : 'カメラが未割当のため待ち時間を算出できません。'}</div></div>`;
     const k = P.waitCalc(a, now);
     const qCams = k.queueCams.map(x => x.code).join('・') || '—';
     const rows = [

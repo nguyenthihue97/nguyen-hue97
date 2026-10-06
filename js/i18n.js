@@ -143,7 +143,7 @@
     'スタッフ配置を記録しました': 'đã ghi nhận việc bố trí nhân viên',
     // levels / statuses
     'やや混雑': 'hơi đông', '混雑': 'đông', '空き': 'vắng', '休止中': 'tạm ngừng', '整備中': 'đang bảo trì', '点検中': 'đang kiểm tra', '長期整備中': 'bảo trì dài hạn',
-    '未開業': 'chưa khai trương', '稼働中': 'đang hoạt động', 'カメラ未割当': 'chưa gán camera', 'カメラ未設置': 'chưa lắp camera', '収容超過': 'vượt sức chứa',
+    '未開業': 'chưa khai trương', '稼働中': 'đang hoạt động', 'カメラ未割当': 'chưa gán camera', 'カメラ未設置': 'chưa lắp camera', 'カメラ停止中': 'camera đang dừng', '更新中': 'đang cập nhật', '収容超過': 'vượt sức chứa',
     'フレーム過負荷': 'quá tải khung hình', '信号断': 'mất tín hiệu', '未有効化': 'chưa kích hoạt', '未有効': 'chưa kích hoạt', '整備・休止': 'bảo trì / tạm ngừng',
     '点検': 'kiểm tra', '長期整備': 'bảo trì dài hạn', '整備': 'bảo trì', '休止': 'tạm ngừng', '運休': 'ngừng chạy', '高負荷': 'tải cao', 'やや高負荷': 'tải hơi cao', '安定': 'ổn định',
     // ride list
@@ -163,7 +163,10 @@
     'カメラが未割当のため計測値がありません。アトラクションを編集でカメラを割り当ててください。': 'chưa gán camera nên không có số liệu đo. Hãy gán camera trong phần sửa trò chơi.',
     '混雑度は安定しています。追加の配置調整は不要です。': 'mức đông ổn định. Không cần điều phối thêm.',
     '待ち時間の算出方法': 'cách tính thời gian chờ', '運行停止中のため待ち時間は算出していません。': 'đang ngừng vận hành nên không tính thời gian chờ.',
-    'カメラが未割当のため待ち時間を算出できません。': 'chưa gán camera nên không thể tính thời gian chờ.', '実測（乗り場カメラ）': 'thực đo (camera khu lên tàu)',
+    'カメラが未割当のため待ち時間を算出できません。': 'chưa gán camera nên không thể tính thời gian chờ.',
+    '待機列カメラがすべて停止しているため待ち時間を算出できません。': 'tất cả camera hàng chờ đang dừng nên không thể tính thời gian chờ.',
+    '待機列カメラがすべて停止しているため計測値がありません。ゲストアプリでは「更新中」と表示しています。カメラの点検を保守へ依頼してください。':
+      'tất cả camera hàng chờ đang dừng nên không có số liệu đo. App khách đang hiển thị “đang cập nhật”. Hãy yêu cầu bảo trì kiểm tra camera.', '実測（乗り場カメラ）': 'thực đo (camera khu lên tàu)',
     '理論値で算出': 'tính theo lý thuyết', '実測の乗車ペース': 'tốc độ lên tàu thực đo', '理論上の処理能力': 'công suất lý thuyết',
     '計算値（人数 ÷ 乗車ペース）': 'giá trị tính (số người ÷ tốc độ lên tàu)', '1回あたりの座席数 × 運行回数': 'số ghế mỗi lượt × số lượt chạy', '計算値': 'giá trị tính', '乗降係数': 'hệ số lên xuống',
     '乗り場カメラが未設置のため、理論上の処理能力で算出しています。': 'chưa lắp camera khu lên tàu nên đang tính theo công suất lý thuyết.',
