@@ -146,9 +146,14 @@
     return a.closedReason || null;
   }
   const closedLabel = r => REASON_LABEL[r] || (/中$/.test(r) ? r : r + '中');
+  const HEADLINERS = ['coaster', 'gokart'];   // first one still running is kept busy
+  const headliner = () => HEADLINERS.find(id => { const r = byId(id); return r && !closedReason(r); });
   function occAt(a, d, jitter) {
     const c = cfg(a);
     let v = c.base * dayCurve(hourOf(d), c.phase) * (1 + .14 * smoothNoise(a.id, d));
+    // demo: the headliner queues all day, so at least one ride is 混雑 whenever the app is opened
+    const h = hourOf(d);
+    if (a.id === headliner() && h >= OPEN_H && h < CLOSE_H) v = Math.max(v, c.thBusy / 100 + .07 + .04 * smoothNoise(a.id + 'hl', d));
     if (jitter) v += (hash(a.id + Math.floor(d.getTime() / 5000)) - .5) * .03;   // 5s measurement jitter
     return Math.max(0, Math.min(1.3, v));
   }

@@ -193,7 +193,8 @@
         const w = P.predictWait(a, tt);
         if (!best || w < best.w) best = { t: tt, w };
       }
-      advice = `通常より${pct}%混雑しています。` + (best ? `${P.hhmm(best.t)}に戻れば、待ち時間はおよそ${Math.max(5, best.w)} 分。` : '');
+      advice = `通常より${pct}%混雑しています。` + (best && best.w < l.wait ? `${P.hhmm(best.t)}に戻れば、待ち時間はおよそ${Math.max(5, best.w)} 分。`
+        : '本日は終日混雑が続く見込みです。近くの空いているアトラクションがおすすめです。');
     } else {
       const upto = Math.min(P.SLOTS - 1, s.current + 3);
       let best = s.current;
